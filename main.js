@@ -1,5 +1,5 @@
 function getCats() {
-    fetch('https://mkaya93.github.io/COMP1073FinalExam/Q3/cats.json')
+    fetch('https://techno-pixel.github.io/Q3.github.io/cats.json')
     .then((response) => {
         console.log(response);
         return response.json();
@@ -23,7 +23,7 @@ function cats(json) {
         let ul = document.createElement('ul');
 
         // set the image to the source
-        img.setAttribute('src', 'https://github.com/techno-pixel/Q3.github.io/tree/master/assets/' + cats[i].photo);
+        img.setAttribute('src', cats[i].photo);
         img.setAttribute('alt', cats[i].name);
 
         // create the product information details
