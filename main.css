@@ -1,0 +1,16 @@
+@charset "UTF-8";
+/* CSS Document */
+
+
+h1, 
+h2,
+h3, 
+p {
+  padding: 20px; 
+}
+
+.meow {
+  background-image:url('cattified.jpg'); 
+  background-size: cover; 
+  background-position-y: 20%; 
+}
