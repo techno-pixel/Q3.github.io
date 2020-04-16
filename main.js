@@ -1,7 +1,7 @@
+// request the json file using promises
 function getCats() {
     fetch('https://techno-pixel.github.io/Q3.github.io/cats.json')
     .then((response) => {
-        console.log(response);
         return response.json();
     })
     .then((json) => {
@@ -9,6 +9,7 @@ function getCats() {
     });
 }
 
+// function to build the elements and display the info
 function cats(json) {
     let cats = json.cats;
     let section = document.querySelector('section');
@@ -20,6 +21,7 @@ function cats(json) {
         let img = document.createElement('img');
         let p1 = document.createElement('p');
         let p2 = document.createElement('p');
+        let p3 = document.createElement('p');
         let ul = document.createElement('ul');
 
         // set the image to the source
@@ -30,12 +32,13 @@ function cats(json) {
         h2.textContent = cats[i].name;
         p1.textContent = 'Species: ' + cats[i].species;
         p2.textContent = 'Age: ' + cats[i].age;
+        p3.textContent = 'FavFoods: ';
 
         let favFoods = cats[i].favFoods;
         for(let j = 0; j< cats.length; j++)
         {
             let listItem = document.createElement('li');
-            listItem.textContent = favFoods[j];
+            listItem.innerHTML = favFoods[j];
             ul.appendChild(listItem);
         }
 
@@ -43,11 +46,13 @@ function cats(json) {
         article.appendChild(h2);
         article.appendChild(p1);
         article.appendChild(p2);
+        article.appendChild(p3);
         article.appendChild(ul);
         section.appendChild(article);
     }
 };
 
+// get the button from the html file and add an event listener, which will fetch the images and then display the info
 let button = document.querySelector("button");
 button.addEventListener("click", getCats);
 
