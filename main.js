@@ -1,6 +1,13 @@
-let button = document.querySelector("button");
-
-button.addEventListener("click", cats);
+function getCats() {
+    fetch('https://mkaya93.github.io/COMP1073FinalExam/Q3/cats.json')
+    .then((response) => {
+        console.log(response);
+        return response.json();
+    })
+    .then((json) => {
+        cats(json);
+    });
+}
 
 function cats(json) {
     let cats = json.cats;
@@ -16,7 +23,7 @@ function cats(json) {
         let ul = document.createElement('ul');
 
         // set the image to the source
-        img.setAttribute('src', 'https://jessicagilfillan.github.io/Final_Exam_Prep/Q3/assets/' + cats[i].photo);
+        img.setAttribute('src', 'https://github.com/techno-pixel/Q3.github.io/tree/master/assets/' + cats[i].photo);
         img.setAttribute('alt', cats[i].name);
 
         // create the product information details
@@ -41,10 +48,8 @@ function cats(json) {
     }
 };
 
-fetch('https://jessicagilfillan.github.io/Final_Exam_Prep/Q3/cats.json')
-.then((response) => {
-    return response.json();
-})
-.then((json) => {
-    cats(json);
-})
+let button = document.querySelector("button");
+button.addEventListener("click", getCats);
+
+
+

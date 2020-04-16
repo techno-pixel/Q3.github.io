@@ -1,3 +1,4 @@
+
 {
   "cats": [
     {
@@ -5,21 +6,21 @@
       "species" : "Cat",
       "favFoods" : ["wet food", "dry food", "<strong>any</strong> food"],
       "age" : 9,
-      "photo" : "https://github.com/JessicaGilfillan/Final_Exam_Prep/blob/master/Q3/assets/shadow.jpg"
+      "photo" : "https://github.com/techno-pixel/Q3.github.io/blob/master/assets/stevie.jpg"
     },
     {
       "name" : "Shadow",
       "species" : "Cat",
       "favFoods" : ["wet food", "dry food", "bugs", "<strong>all the food!!</strong> "],
       "age" : 2,
-      "photo" : "https://github.com/JessicaGilfillan/Final_Exam_Prep/blob/master/Q3/assets/shadow.jpg"
+      "photo" : "https://github.com/techno-pixel/Q3.github.io/blob/master/assets/shadow.jpg"
     },
     {
       "name" : "Zoey",
       "species" : "Cat",
       "favFoods" : ["catfood", "catnip", "cream"],
       "age" : 13,
-      "photo" : "https://github.com/JessicaGilfillan/Final_Exam_Prep/blob/master/Q3/assets/zoey.jpg"
+      "photo" : "https://github.com/techno-pixel/Q3.github.io/blob/master/assets/zoey.jpg"
     }
   ]
 }
